@@ -34,8 +34,13 @@ convert_raw_data <-
            process_all = FALSE) {
     ###check docker is available or not
     if (!stevedore::docker_available()) {
-      stop("Please install docker first (https://www.docker.com/get-started).\n")
+      stop("Please install and run docker first 
+           (https://www.docker.com/get-started).\n")
     }
+    
+    ##pull pwiz image
+    docker_pull_pwiz(force = FALSE)
+    
     input_path <- normalizePath(input_path)
     if (missing(output_path)) {
       output_path <- input_path
