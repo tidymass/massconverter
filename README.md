@@ -15,10 +15,6 @@
 
 `massconverter` provide the `mass_dataset` class which is specifically developed and designed to organize the rectangular **metabolomics data sets** into a standard structure. `massconverter` package also provide a lot of base processing functions to process and operate the `mass_dataset` class. In additional, the `mass_dataset` class can be processed by all the packages from [`tidymass`](https://tidymass.github.io/tidymass/).
 
-<img src="man/figures/Figure.png" align="middle" alt="" width = "100%"/>
-
-Merging separate data objects is useful for manually-imported data objects, especially for metabolomics data analysis. It's significant to keep unified format before analysis. While the first category of merging functions is useful for direct manipulations of the data for analytical purposes, `massconverter` is a convenience/support tool to help get your data into the right format.
-
 # Installation
 
 You can install `massconverter` from

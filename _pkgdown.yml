@@ -23,59 +23,7 @@ template:
     ganalytics: UA-000000-01
 
 reference:
-  - title: Create mass_dataset-class object
-    desc: Import data and create them as a mass_dataset-object class
-    contents:
-    - check_mass_dataset
-    - create_mass_dataset
-  - title: Extract data
-    desc: Extract data from mass_dataset-class object
-    contents:
-    - extract_expression_data
-    - extract_sample_info
-    - extract_variable_info
-    - extract_sample_info_note
-    - extract_variable_info_note
-  - title: Summary
-    desc: Summarize inforamtion of dataset
-    contents:
-    - get_sample_id
-    - get_sample_number
-    - get_variable_id
-    - get_variable_number
-    - get_mv_number
-  - title: Filter samples
-    desc: Filter sample from mass_dataset-class object
-    contents:
-    - filter_samples
-  - title: Filter variables
-    desc: Filter variables from mass_dataset-class object
-    contents:
-    - filter_variables
-  - title: Mutate variables
-    desc: Add some variabels to variables
-    contents:
-    - calculate_rsd
-    - mutate_ms2
-    - mutate_mean_intensity
-    - mutate_median_intensity
-    - mutate_rsd
-    - mutate_sample_na_number
-    - mutate_variable_na_number
-  - title: System
-    desc: System
-    contents:
-    - massconverter_logo
-    - massconverter_packages
-  - title: Dataset
-    desc: Dataset built in package
-    contents:
-    - expression_data
-    - sample_info
-    - sample_info_note
-    - variable_info
-    - variable_info_note
-  
+
 navbar:
   title: "sparklyr"
   # type: inverse
@@ -86,46 +34,12 @@ navbar:
     articles:
       text: Help documents
       menu:
-      - text: --------
-      - text: "Installation"
+      - text: "Install docker"
+        href: articles/install_docker.html
       - text: "Install massconverter"
-        href: articles/massconverter_install.html
-      - text: --------
-      - text: "mass_dataset-class object"
-      - text: "Data import and export"
-        href: articles/data_import_and_export.html
-      - text: "Add MS2 spectra data into mass_dataset class object"
-        href: articles/mutate_ms2.html
-      - text: --------
-      - text: "Information from mass_dataset"
-      - text: "Extract data from mass_dataset"
-        href: articles/extract_data.html
-      - text: "Processing information"
-        href: articles/process_info.html
-      - text: "Output html processing information"
-        href: articles/html_process_info.html
-      - text: --------
-      - text: "Processing of mass_dataset"
-      - text: "Summary information"
-        href: articles/summary_info.html
-      - text: "Add new information to mass_dataset"
-        href: articles/add_information.html
-      - text: "Filtering samples/variables"
-        href: articles/filtering.html
-      - text: "Accessor"
-        href: articles/accessor.html
-      - text: --------
-      - text: "Merge mass_dataset"
-      - text: "rbind or cbind mass_dataset"
-        href: articles/cbind_rbind_mass_dataset.html
-      - text: "Merge two mass_dataset"
-        href: articles/merge_two_mass_dataset.html
-      - text: --------
-      - text: "Others"
-      - text: "Process mass_dataset using tidyverse functions"
-        href: articles/tidyverse_verse.html
-      - text: "R base functions for mass_dataset"
-        href: articles/base_function.html
+        href: articles/install.html
+      - text: "Convert data"
+        href: articles/convert_data.html
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: https://twitter.com/JasperShen1990
