@@ -23,5 +23,5 @@ vignettes/tidyverse_verse.Rmd
 vignettes/example.Rmd
 vignettes/*cache
 vignettes/*.png
-man/figures
+man/figures/
 vignettes/

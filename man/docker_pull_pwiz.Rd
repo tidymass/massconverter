@@ -5,7 +5,7 @@
 \alias{docker_pull_pwiz}
 \title{docker_pull_pwiz}
 \usage{
-docker_pull_pwiz(force = TRUE)
+docker_pull_pwiz(force = FALSE)
 }
 \arguments{
 \item{force}{Force to install pwiz}

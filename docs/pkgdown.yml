@@ -2,12 +2,11 @@ pandoc: 2.11.4
 pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
-  Untitled: Untitled.html
   contact_us: contact_us.html
   convert_data: convert_data.html
   install: install.html
   install_docker: install_docker.html
-last_built: 2022-01-08T10:24Z
+last_built: 2022-01-08T10:55Z
 urls:
   reference: https://tidymass.github.io/massconverter/reference
   article: https://tidymass.github.io/massconverter/articles

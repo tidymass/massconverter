@@ -10,7 +10,7 @@
 #' docker_pull_pwiz(force = FALSE)
 
 
-docker_pull_pwiz = function(force = TRUE) {
+docker_pull_pwiz = function(force = FALSE) {
   ###check docker is available or not
   if (!stevedore::docker_available(verbose = FALSE)) {
     stop("Please install docker first (https://www.docker.com/get-started).\n")
