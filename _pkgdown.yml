@@ -1,0 +1,158 @@
+destination: docs
+
+url: https://tidymass.github.io/massconverter/
+
+home:
+  strip_header: false
+  title: massconverter package
+  links:
+  - text: Find me
+    href: https://www.shenxt.info/
+
+development:
+  mode: auto
+  version_label: danger
+  version_tooltip: "Under development"
+
+template:
+  params:
+    docsearch:
+      api_key: 21ff2860978c5d2ceb7d4150364070ff
+      index_name: massconverter
+    bootswatch: flatly
+    ganalytics: UA-000000-01
+
+reference:
+  - title: Create mass_dataset-class object
+    desc: Import data and create them as a mass_dataset-object class
+    contents:
+    - check_mass_dataset
+    - create_mass_dataset
+  - title: Extract data
+    desc: Extract data from mass_dataset-class object
+    contents:
+    - extract_expression_data
+    - extract_sample_info
+    - extract_variable_info
+    - extract_sample_info_note
+    - extract_variable_info_note
+  - title: Summary
+    desc: Summarize inforamtion of dataset
+    contents:
+    - get_sample_id
+    - get_sample_number
+    - get_variable_id
+    - get_variable_number
+    - get_mv_number
+  - title: Filter samples
+    desc: Filter sample from mass_dataset-class object
+    contents:
+    - filter_samples
+  - title: Filter variables
+    desc: Filter variables from mass_dataset-class object
+    contents:
+    - filter_variables
+  - title: Mutate variables
+    desc: Add some variabels to variables
+    contents:
+    - calculate_rsd
+    - mutate_ms2
+    - mutate_mean_intensity
+    - mutate_median_intensity
+    - mutate_rsd
+    - mutate_sample_na_number
+    - mutate_variable_na_number
+  - title: System
+    desc: System
+    contents:
+    - massconverter_logo
+    - massconverter_packages
+  - title: Dataset
+    desc: Dataset built in package
+    contents:
+    - expression_data
+    - sample_info
+    - sample_info_note
+    - variable_info
+    - variable_info_note
+  
+navbar:
+  title: "sparklyr"
+  # type: inverse
+  structure:
+    left: [home, articles, news, reference, contact]
+    right: [github, twitter]
+  components:
+    articles:
+      text: Help documents
+      menu:
+      - text: --------
+      - text: "Installation"
+      - text: "Install massconverter"
+        href: articles/massconverter_install.html
+      - text: --------
+      - text: "mass_dataset-class object"
+      - text: "Data import and export"
+        href: articles/data_import_and_export.html
+      - text: "Add MS2 spectra data into mass_dataset class object"
+        href: articles/mutate_ms2.html
+      - text: --------
+      - text: "Information from mass_dataset"
+      - text: "Extract data from mass_dataset"
+        href: articles/extract_data.html
+      - text: "Processing information"
+        href: articles/process_info.html
+      - text: "Output html processing information"
+        href: articles/html_process_info.html
+      - text: --------
+      - text: "Processing of mass_dataset"
+      - text: "Summary information"
+        href: articles/summary_info.html
+      - text: "Add new information to mass_dataset"
+        href: articles/add_information.html
+      - text: "Filtering samples/variables"
+        href: articles/filtering.html
+      - text: "Accessor"
+        href: articles/accessor.html
+      - text: --------
+      - text: "Merge mass_dataset"
+      - text: "rbind or cbind mass_dataset"
+        href: articles/cbind_rbind_mass_dataset.html
+      - text: "Merge two mass_dataset"
+        href: articles/merge_two_mass_dataset.html
+      - text: --------
+      - text: "Others"
+      - text: "Process mass_dataset using tidyverse functions"
+        href: articles/tidyverse_verse.html
+      - text: "R base functions for mass_dataset"
+        href: articles/base_function.html
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: https://twitter.com/JasperShen1990
+    contact:
+      text: Contact us
+      href: articles/contact_us.html
+    news:
+      text: News
+      menu:
+      - text: "Blog posts"
+      - text: "Version 0.4.0"
+        href: articles/massconverter.html
+      - text: "------------------"
+      - text: "Change log"
+        href: news/index.html
+
+footer:
+  structure: 
+    left: [package, developed_by, from]
+    right: [contact, email, wechat, tidymass]
+  components:
+    from: <br> from <i class="fa fa-university"></i> Stanford University <br> <i class="fa fa-clinic-medical"></i>School of Medicine <br> <i class="fa fa-dna"></i> Genetics Department
+    more_sofware: <br> <i class="fa fa-laptop-code"></i> [More softare](https://www.shenxt.info/files/wechat_QR.jpg)
+    contact: <b>Contact Us:</b> <br>
+    email: <i class="fa fa-envelope"></i> shenxt1990@outlook.com <br>
+    wechat: <i class="fa fa-weixin"></i>  [shenxt1990](https://www.shenxt.info/files/wechat_QR.jpg) <br>
+    tidymass: <i class="fa fa-network-wired"></i> [A part of tidymass](https://tidymass.github.io/tidymass/)
+    
+toc:
+  depth: 3

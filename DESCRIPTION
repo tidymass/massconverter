@@ -1,0 +1,41 @@
+Package: massconverter
+Title: Convert mass spectrometry raw data to othter format data
+Version: 0.99.1
+Date: 2022-01-08
+Authors@R: 
+    person(given = "Xiaotao",
+           family = "Shen",
+           role = c("aut", "cre"),
+           email = "shenxt1990@outlook.com",
+           comment = c(ORCID = "0000-0002-9608-9964"))
+Description: Convert mass spectrometry raw data to othter format data. Now it is
+             based on the docker for msconvert. So the users need to install 
+             docker and run docker first.
+URL: https://github.com/tidymass/massconverter
+BugReports: https://github.com/tidymass/massconverter/issues
+Depends: R (>= 4.1)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
+Imports: 
+    magrittr,
+    rstudioapi,
+    crayon,
+    purrr,
+    tools,
+    leaflet,
+    stevedore,
+    methods
+Suggests: 
+    knitr,
+    rmarkdown,
+    BiocStyle,
+    RUnit,
+    BiocGenerics,
+    tidyverse,
+    testthat (>= 3.0.0)
+Note:
+biocViews: Metabolomics, MassSpectrometry
