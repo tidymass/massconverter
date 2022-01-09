@@ -40,6 +40,8 @@ navbar:
         href: articles/install.html
       - text: "Convert data"
         href: articles/convert_data.html
+      - text: "Help of msconvert"
+        href: articles/msconvert_help.html
     twitter:
       icon: "fab fa-twitter fa-lg"
       href: https://twitter.com/JasperShen1990
