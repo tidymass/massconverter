@@ -6,7 +6,7 @@ articles:
   convert_data: convert_data.html
   install: install.html
   install_docker: install_docker.html
-last_built: 2022-01-08T22:43Z
+last_built: 2022-01-09T02:18Z
 urls:
   reference: https://tidymass.github.io/massconverter/reference
   article: https://tidymass.github.io/massconverter/articles

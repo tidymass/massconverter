@@ -13,7 +13,11 @@
 
 # About
 
-`massconverter` provide the `mass_dataset` class which is specifically developed and designed to organize the rectangular **metabolomics data sets** into a standard structure. `massconverter` package also provide a lot of base processing functions to process and operate the `mass_dataset` class. In additional, the `mass_dataset` class can be processed by all the packages from [`tidymass`](https://tidymass.github.io/tidymass/).
+`massconverter` can be used to convert mass spectrometry data to other format data based on `msconvert` docker image. 
+
+More information can be found [here](https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses)
+
+<img src="man/figures/Screen Shot 2022-01-08 at 6.12.58 PM.png" align="middle" alt="" width = "100%"/>
 
 # Installation
 
