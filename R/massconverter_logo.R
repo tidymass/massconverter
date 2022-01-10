@@ -11,6 +11,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom stevedore docker_available docker_client
 #' @importFrom methods new
+#' @importFrom stringr str_trim
 #' @export
 #' @return logo
 #' @examples

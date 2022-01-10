@@ -135,7 +135,7 @@
       <h1 data-toc-skip>Help of msconvert</h1>
                         <h4 data-toc-skip class="author">Xiaotao Shen (<a href="https://www.shenxt.info/" class="external-link uri">https://www.shenxt.info/</a>)</h4>
                         
-            <h4 data-toc-skip class="date">Created on 2021-12-26 and updated on 2022-01-09</h4>
+            <h4 data-toc-skip class="date">Created on 2021-12-26 and updated on 2022-01-10</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tidymass/massconverter/blob/HEAD/vignettes/msconvert_help.Rmd" class="external-link"><code>vignettes/msconvert_help.Rmd</code></a></small>
       <div class="hidden name"><code>msconvert_help.Rmd</code></div>
@@ -733,10 +733,33 @@ ProteoWizard release: 3.0.21354 (9ee14c7)
 Build date: Dec 20 2021 16:00:06</code></pre>
 </div>
 <div class="section level1">
+<h1 id="example-of-docker">
+<strong>Example of docker</strong><a class="anchor" aria-label="anchor" href="#example-of-docker"></a>
+</h1>
+<pre><code>docker run --rm -e WINEDEBUG=-all -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data:/data -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data/mzxml:/outpath chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/3.raw --ignoreUnknownInstrumentError --mzML --32 --zlib  --filter \"peakPicking true 1-\" --filter \"msLevel 1\"  -o /outpath/</code></pre>
+</div>
+<div class="section level1">
+<h1 id="other-links">
+<strong>Other links</strong><a class="anchor" aria-label="anchor" href="#other-links"></a>
+</h1>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://fragpipe.nesvilab.org/docs/tutorial_convert.html" class="external-link uri">https://fragpipe.nesvilab.org/docs/tutorial_convert.html</a></p></li>
+<li><p><a href="https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46" class="external-link uri">https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46</a></p></li>
+<li><p><a href="https://proteowizard.sourceforge.io/tools/filters.html" class="external-link uri">https://proteowizard.sourceforge.io/tools/filters.html</a></p></li>
+<li><p><a href="https://ccms-ucsd.github.io/GNPSDocumentation/fileconversion/" class="external-link uri">https://ccms-ucsd.github.io/GNPSDocumentation/fileconversion/</a></p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/28188540/" class="external-link uri">https://pubmed.ncbi.nlm.nih.gov/28188540/</a></p></li>
+<li><p><a href="https://rickhelmus.github.io/patRoon/reference/convertMSFiles.html" class="external-link uri">https://rickhelmus.github.io/patRoon/reference/convertMSFiles.html</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=xnjvZlSlp40" class="external-link uri">https://www.youtube.com/watch?v=xnjvZlSlp40</a></p></li>
+<li><p><a href="https://github.com/pwilmart/PAW_pipeline/blob/master/docs/MSConvert.md" class="external-link uri">https://github.com/pwilmart/PAW_pipeline/blob/master/docs/MSConvert.md</a></p></li>
+<li><p><a href="https://link.springer.com/protocol/10.1007/978-1-4939-6747-6_23" class="external-link uri">https://link.springer.com/protocol/10.1007/978-1-4939-6747-6_23</a></p></li>
+<li><p><a href="https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R" class="external-link uri">https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R</a></p></li>
+</ol>
+</div>
+<div class="section level1">
 <h1 id="session-information">
 <strong>Session information</strong><a class="anchor" aria-label="anchor" href="#session-information"></a>
 </h1>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; R version 4.1.0 (2021-05-18)</span>
 <span class="co">#&gt; Platform: x86_64-apple-darwin17.0 (64-bit)</span>

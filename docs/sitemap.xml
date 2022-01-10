@@ -37,7 +37,13 @@
     <loc>https://tidymass.github.io/massconverter/news/index.html</loc>
   </url>
   <url>
+    <loc>https://tidymass.github.io/massconverter/reference/check_msconvert_parameter.html</loc>
+  </url>
+  <url>
     <loc>https://tidymass.github.io/massconverter/reference/convert_raw_data.html</loc>
+  </url>
+  <url>
+    <loc>https://tidymass.github.io/massconverter/reference/create_msconvert_parameter.html</loc>
   </url>
   <url>
     <loc>https://tidymass.github.io/massconverter/reference/create_msconvert_parameters.html</loc>
@@ -46,16 +52,25 @@
     <loc>https://tidymass.github.io/massconverter/reference/docker_pull_pwiz.html</loc>
   </url>
   <url>
+    <loc>https://tidymass.github.io/massconverter/reference/from_msconvert_parameter_to_code.html</loc>
+  </url>
+  <url>
     <loc>https://tidymass.github.io/massconverter/reference/from_msconvert_parameters_to_code.html</loc>
   </url>
   <url>
     <loc>https://tidymass.github.io/massconverter/reference/get_massconverter_version.html</loc>
   </url>
   <url>
+    <loc>https://tidymass.github.io/massconverter/reference/get_run_code.html</loc>
+  </url>
+  <url>
     <loc>https://tidymass.github.io/massconverter/reference/index.html</loc>
   </url>
   <url>
     <loc>https://tidymass.github.io/massconverter/reference/massconverter_logo.html</loc>
+  </url>
+  <url>
+    <loc>https://tidymass.github.io/massconverter/reference/msconvert_parameter-class.html</loc>
   </url>
   <url>
     <loc>https://tidymass.github.io/massconverter/reference/msconvert_parameters-class.html</loc>

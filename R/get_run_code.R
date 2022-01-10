@@ -1,5 +1,5 @@
-#' @title convert_raw_data
-#' @description Convert raw data to different format data.
+#' @title get_run_code
+#' @description get_run_code
 #' @docType methods
 #' @author Xiaotao Shen
 #' \email{shenxt1990@@outlook.com}
@@ -8,7 +8,7 @@
 #' @param msconvert_parameter msconvert parameters. See 
 #' @param docker_parameters docker_parameters
 #' @param process_all process all raw data together or one by one.
-#' @return mzXML or something like this format.
+#' @return Code can run in bash.
 #' @export
 #' @examples
 #' \dontrun{
@@ -33,27 +33,19 @@
 #'   )
 #' parameter
 #' 
-#' convert_raw_data(input_path = "demo_data/raw_data",
+#' get_run_code(input_path = "demo_data/raw_data",
 #'                  output_path = "demo_data/mzxml",
 #'                  msconvert_parameter = parameter,
 #'                  process_all = FALSE
 #'                  )
 #' }
 
-convert_raw_data <-
+get_run_code <-
   function(input_path = ".",
            output_path,
            msconvert_parameter,
            docker_parameters = c(),
            process_all = FALSE) {
-    ###check docker is available or not
-    if (!stevedore::docker_available()) {
-      stop("Please install and run docker first 
-           (https://www.docker.com/get-started).\n")
-    }
-    
-    ##pull pwiz image
-    docker_pull_pwiz(force = FALSE)
     
     input_path <- normalizePath(input_path)
     if (missing(output_path)) {
@@ -61,7 +53,6 @@ convert_raw_data <-
     } else{
       output_path <- normalizePath(output_path)
     }
-    dir.create(output_path, showWarnings = FALSE)
     file_name = dir(input_path, full.names = TRUE) %>%
       normalizePath()
     if (length(file_name) == 0) {
@@ -94,14 +85,14 @@ code =
       for (data_type in file_extension) {
         run_code <-
           paste0(docker_run_code, '/data/', data_type, code, '  -o /outpath/')
-        system(run_code, intern = FALSE)
+        return(run_code)
       }
     } else{
       for (i in file_name) {
         run_code <-
           paste0(docker_run_code, '/data/', basename(i), code, 
                  '  -o /outpath/')
-        system(run_code, intern = FALSE)
+        return(run_code)
       }
     }
   }

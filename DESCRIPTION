@@ -28,7 +28,8 @@ Imports:
     tools,
     leaflet,
     stevedore,
-    methods
+    methods,
+    stringr
 Suggests: 
     knitr,
     rmarkdown,
