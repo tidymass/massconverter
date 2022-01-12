@@ -1,0 +1,55 @@
+---
+title: "Install docker"
+author:
+- name: Xiaotao Shen (https://www.shenxt.info/)
+date: "Created on 2021-12-26 and updated on `r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    toc: no
+  pdf_document:
+    toc: no
+vignette: >
+  %\VignetteIndexEntry{install_docker}
+  %\VignettePackage{massconverter}
+  % \VignetteEngine{knitr::rmarkdown}
+  % \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+```
+
+We need to install docker first.
+
+Please refer to the offical website of docker: [https://www.docker.com/get-started](https://www.docker.com/get-started).
+
+# **Download the docker**
+
+Download the docker based on your platform.
+
+![](../man/figures/Screen Shot 2022-01-08 at 2.28.32 AM.png)
+
+# **Install docker**
+
+![](../man/figures/docker-app-drag.png)
+# **Run docker**
+
+Double-click Docker.app in the Applications folder to start Docker. In the example below, the Applications folder is in “grid” view mode.
+
+![](../man/figures/docker-app-in-apps.png)
+
+# **Session information**
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```
+
+

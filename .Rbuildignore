@@ -21,7 +21,11 @@ demo_data
 pkgdown/
 vignettes/tidyverse_verse.Rmd
 vignettes/example.Rmd
-vignettes/*cache
+vignettes/*_cache
 vignettes/*.png
 man/figures/
-vignettes/
+vignettes/convert_data_cache
+vignettes/demo_data
+vignettes/install_cache
+vignettes/install_docker_cache
+vignettes/msconvert_help_cache

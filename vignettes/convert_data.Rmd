@@ -1,0 +1,117 @@
+---
+title: "Convert data"
+author:
+- name: Xiaotao Shen (https://www.shenxt.info/)
+date: "Created on 2021-12-26 and updated on `r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+    toc: no
+  pdf_document:
+    toc: no
+vignette: >
+  %\VignetteIndexEntry{convert_data}
+  %\VignettePackage{massconverter}
+  % \VignetteEngine{knitr::rmarkdown}
+  % \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = TRUE,
+  out.width = "100%"
+)
+```
+
+# **Pull pwiz docker**
+
+Please run docker first. 
+
+We need the docker image: https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses. So first we need use the `docker_pull_pwiz()` to pull this image.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+library(massconverter)
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+docker_pull_pwiz()
+```
+
+If you want to pull the latest version, set `force = TRUE`
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+docker_pull_pwiz(force = TRUE)
+```
+
+# **Set the msconvert parameters**
+
+The we need to set parameters for converter.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+ parameter =
+   massconverter::create_msconvert_parameter(
+     output_format = "mzXML",
+     binary_encoding_precision = "32",
+     zlib = TRUE,
+     write_index = TRUE,
+     peak_picking_algorithm = "cwt",
+     vendor_mslevels = c(1, NA),
+     cwt_mslevels = c(1, NA),
+     cwt_min_snr = 0.1,
+     cwt_min_peak_spacing = 0.1,
+     subset_polarity = "positive",
+     subset_scan_number = c(NA, NA),
+     subset_scan_time = c(60, 300),
+     subset_mslevels = c(1, 2),
+     zero_samples_mode = "removeExtra",
+     zero_samples_mslevels = c(1, NA),
+     zero_samples_add_missing_flanking_zero_count = 5
+   )
+```
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+parameter
+```
+
+# **Convert data**
+
+Just put the raw data into one folder, and then begin to convert data.
+
+Here we use the demo data, please download them [here](). And then put them in one folder named as `demo_data/raw_data`.
+
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+convert_raw_data(input_path = "demo_data/raw_data", 
+                 output_path = "demo_data/mzxml", 
+                 msconvert_parameter = parameter, 
+                 docker_parameters = c(),
+                 process_all = FALSE)
+```
+Then the converted data will be in the `demo_data/mzxml`
+
+![](../man/figures/Screen Shot 2022-01-08 at 3.10.46 AM.png)
+
+# **Bash code**
+
+If you want to run it in bash, you can also use the `get_run_code()` to get the code that can run in bash.
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+get_run_code(
+  input_path = "demo_data/raw_data",
+  output_path = "demo_data/mzxml",
+  msconvert_parameter = parameter,
+  docker_parameters = c(),
+  process_all = FALSE
+)
+```
+
+# **Session information**
+
+```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+sessionInfo()
+```
+
+

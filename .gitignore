@@ -23,7 +23,14 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
-vignettes/
+vignettes/*.png
+vignettes/demo_data
+vignettes/*_cache
+vignettes/convert_data_cache
+vignettes/demo_data
+vignettes/install_cache
+vignettes/install_docker_cache
+vignettes/msconvert_help_cache
 
 # OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
 .httr-oauth
