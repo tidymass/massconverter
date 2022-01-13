@@ -51,10 +51,6 @@ navbar:
     news:
       text: News
       menu:
-      - text: "Blog posts"
-      - text: "Version 0.4.0"
-        href: articles/massconverter.html
-      - text: "------------------"
       - text: "Change log"
         href: news/index.html
 

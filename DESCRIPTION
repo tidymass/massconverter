@@ -13,7 +13,7 @@ Description: Convert mass spectrometry raw data to othter format data. Now it is
              docker and run docker first.
 URL: https://github.com/tidymass/massconverter
 BugReports: https://github.com/tidymass/massconverter/issues
-Depends: R (>= 4.1)
+Depends: R (>= 4.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: false
@@ -37,6 +37,8 @@ Suggests:
     RUnit,
     BiocGenerics,
     tidyverse,
+    htmlwidgets,
+    htmltools,
     testthat (>= 3.0.0)
 Note:
 biocViews: Metabolomics, MassSpectrometry

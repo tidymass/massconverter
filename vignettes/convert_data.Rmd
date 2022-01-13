@@ -27,17 +27,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-# **Pull pwiz docker**
+# **Pull `pwiz` docker**
 
 Please run docker first. 
 
-We need the docker image: https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses. So first we need use the `docker_pull_pwiz()` to pull this image.
+We need the docker image:
+https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses. So first we need use the `docker_pull_pwiz()` to pull this image.
 
 ```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
 library(massconverter)
 ```
 
-```{r,eval=TRUE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
+```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
 docker_pull_pwiz()
 ```
 
