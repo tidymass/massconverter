@@ -33,11 +33,12 @@
 #'   )
 #' parameter
 #' 
-#' get_run_code(input_path = "demo_data/raw_data",
-#'                  output_path = "demo_data/mzxml",
-#'                  msconvert_parameter = parameter,
-#'                  process_all = FALSE
-#'                  )
+#' get_run_code(
+#'   input_path = "demo_data/raw_data",
+#'   output_path = "demo_data/mzxml",
+#'   msconvert_parameter = parameter,
+#'   process_all = FALSE
+#' )
 #' }
 
 get_run_code <-
@@ -46,7 +47,8 @@ get_run_code <-
            msconvert_parameter,
            docker_parameters = c(),
            process_all = FALSE) {
-    
+    dir.create(input_path, showWarnings = FALSE, recursive = TRUE)
+    dir.create(output_path, showWarnings = FALSE, recursive = TRUE)
     input_path <- normalizePath(input_path)
     if (missing(output_path)) {
       output_path <- input_path
@@ -56,7 +58,8 @@ get_run_code <-
     file_name = dir(input_path, full.names = TRUE) %>%
       normalizePath()
     if (length(file_name) == 0) {
-      stop("No raw data in ", input_path)
+      warning("No raw data in ", input_path)
+      return(NULL)
     }
     ###docker parameters
     docker_parameters <- paste(docker_parameters, collapse = ' ')

@@ -46,6 +46,8 @@ convert_raw_data <-
            msconvert_parameter,
            docker_parameters = c(),
            process_all = FALSE) {
+    dir.create(input_path, showWarnings = FALSE, recursive = TRUE)
+    dir.create(output_path, showWarnings = FALSE, recursive = TRUE)
     ###check docker is available or not
     if (!stevedore::docker_available()) {
       stop("Please install and run docker first 

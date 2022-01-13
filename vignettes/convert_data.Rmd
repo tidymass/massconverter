@@ -93,7 +93,8 @@ convert_raw_data(input_path = "demo_data/raw_data",
 ```
 Then the converted data will be in the `demo_data/mzxml`
 
-![](../man/figures/Screen Shot 2022-01-08 at 3.10.46 AM.png)
+<!-- ![](../man/figures/Screen Shot 2022-01-08 at 3.10.46 AM.png) -->
+![](figures/Screen-Shot-2022-01-08-at-3.10.46-AM.png)
 
 # **Bash code**
 

@@ -53,11 +53,12 @@ parameter =
   )
 parameter
 
-get_run_code(input_path = "demo_data/raw_data",
-                 output_path = "demo_data/mzxml",
-                 msconvert_parameter = parameter,
-                 process_all = FALSE
-                 )
+get_run_code(
+  input_path = "demo_data/raw_data",
+  output_path = "demo_data/mzxml",
+  msconvert_parameter = parameter,
+  process_all = FALSE
+)
 }
 }
 \author{

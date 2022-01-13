@@ -35,16 +35,18 @@ Please refer to the offical website of docker: [https://www.docker.com/get-start
 
 Download the docker based on your platform.
 
-![](../man/figures/Screen Shot 2022-01-08 at 2.28.32 AM.png)
+<!-- ![](../man/figures/Screen Shot 2022-01-08 at 2.28.32 AM.png) -->
+![](figures/Screen-Shot-2022-01-08-at-2.28.32-AM.png)
 
 # **Install docker**
 
-![](../man/figures/docker-app-drag.png)
+![](figures/docker-app-drag.png)
 # **Run docker**
 
 Double-click Docker.app in the Applications folder to start Docker. In the example below, the Applications folder is in “grid” view mode.
 
-![](../man/figures/docker-app-in-apps.png)
+<!-- ![](../man/figures/docker-app-in-apps.png) -->
+![](figures/docker-app-in-apps.png)
 
 # **Session information**
 
