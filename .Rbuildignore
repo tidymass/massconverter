@@ -30,5 +30,3 @@ vignettes/demo_data
 vignettes/install_cache
 vignettes/install_docker_cache
 vignettes/msconvert_help_cache
-
-**/.DS_Store

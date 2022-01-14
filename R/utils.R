@@ -61,7 +61,7 @@
 #'   zero_samples_add_missing_flanking_zero_count = 5
 #' )
 
-check_msconvert_parameter =
+check_msconvert_parameter <-
   function(output_format = c("mzXML",
                              "mzML",
                              "mz5",
@@ -160,7 +160,7 @@ check_msconvert_parameter =
     }
     
     if (peak_picking_algorithm == "no") {
-      peak_picking = ""
+      peak_picking <- ""
     }
     
     if (peak_picking_algorithm == "vendor") {
@@ -187,7 +187,7 @@ check_msconvert_parameter =
     
     #####subset
     ###polarity
-    subset_polarity = match.arg(subset_polarity)
+    subset_polarity <- match.arg(subset_polarity)
     if (subset_polarity == "positive") {
       subset_polarity <- paste0("polarity ", "positive")
     }
@@ -279,7 +279,7 @@ check_msconvert_parameter =
         stop("provide zero_samples_add_missing_flanking_zero_count.\n")
       }
       
-      zero_samples = paste(
+      zero_samples <- paste(
         paste0(
           "zeroSamples addMissing=",
           zero_samples_add_missing_flanking_zero_count
@@ -356,7 +356,7 @@ check_msconvert_parameter =
 #' parameter2
 #' from_msconvert_parameter_to_code(parameter2)
 
-from_msconvert_parameter_to_code =
+from_msconvert_parameter_to_code <-
   function(msconvert_parameter) {
     code_list <-
       check_msconvert_parameter(

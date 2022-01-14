@@ -31,7 +31,6 @@ mzXML or something like this format.
 Convert raw data to different format data.
 }
 \examples{
-\dontrun{
 parameter =
   create_msconvert_parameter(
     output_format = "mzXML",
@@ -58,7 +57,6 @@ convert_raw_data(input_path = "demo_data/raw_data",
                  msconvert_parameter = parameter,
                  process_all = FALSE
                  )
-}
 }
 \author{
 Xiaotao Shen

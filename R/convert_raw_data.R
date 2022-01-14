@@ -62,7 +62,7 @@ convert_raw_data <-
       output_path <- normalizePath(output_path)
     }
     dir.create(output_path, showWarnings = FALSE)
-    file_name = dir(input_path, full.names = TRUE) %>%
+    file_name <- dir(input_path, full.names = TRUE) %>%
       normalizePath()
     if (length(file_name) == 0) {
       warning("No raw data in ", input_path)

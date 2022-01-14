@@ -22,7 +22,7 @@ docker_pull_pwiz <- function(force = FALSE) {
   images <- docker$image$list()
   
   ###check if we have pwiz image or not
-  pwiz_available =
+  pwiz_available <-
     any(
       unlist(images$repo_tags) ==
         "chambm/pwiz-skyline-i-agree-to-the-vendor-licenses:latest"

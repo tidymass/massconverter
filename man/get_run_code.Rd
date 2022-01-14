@@ -31,7 +31,6 @@ Code can run in bash.
 get_run_code
 }
 \examples{
-\dontrun{
 parameter =
   create_msconvert_parameter(
     output_format = "mzXML",
@@ -59,7 +58,6 @@ get_run_code(
   msconvert_parameter = parameter,
   process_all = FALSE
 )
-}
 }
 \author{
 Xiaotao Shen
