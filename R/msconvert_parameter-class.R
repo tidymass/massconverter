@@ -46,7 +46,7 @@
 #' )
 #' parameter
 
-create_msconvert_parameter =
+create_msconvert_parameter <-
   function(output_format = c("mzXML",
                              "mzML",
                              "mz5",
@@ -73,7 +73,7 @@ create_msconvert_parameter =
            zero_samples_add_missing_flanking_zero_count = 5) {
     
     ####check parameters
-    result = 
+    result <-
     check_msconvert_parameter(
       output_format = output_format,
       binary_encoding_precision = binary_encoding_precision,
@@ -94,7 +94,7 @@ create_msconvert_parameter =
         zero_samples_add_missing_flanking_zero_count
     )
     
-    parameter = new(
+    parameter <- new(
         Class = "msconvert_parameter",
         pacakge_name = "massconverter",
         function_name = "create_msconvert_parameter",

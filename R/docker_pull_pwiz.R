@@ -10,7 +10,7 @@
 #' docker_pull_pwiz(force = FALSE)
 
 
-docker_pull_pwiz = function(force = FALSE) {
+docker_pull_pwiz <- function(force = FALSE) {
   ###check docker is available or not
   if (!stevedore::docker_available(verbose = FALSE)) {
     stop("Please install docker first (https://www.docker.com/get-started).\n")
@@ -31,13 +31,13 @@ docker_pull_pwiz = function(force = FALSE) {
   ###if force is true
   if (force) {
     docker$image$pull('chambm/pwiz-skyline-i-agree-to-the-vendor-licenses')
-    cat("Done.\n")
+    message("Done.\n")
   } else{
     if (pwiz_available) {
-      cat("You have installed pwiz.\n")
+      message("You have installed pwiz.\n")
     } else{
       docker$image$pull('chambm/pwiz-skyline-i-agree-to-the-vendor-licenses')
-      cat("Done.\n")
+      message("Done.\n")
     }
     
   }

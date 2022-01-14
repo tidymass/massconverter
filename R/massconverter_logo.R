@@ -5,7 +5,8 @@
 #' \email{shenxt1990@@outlook.com}
 #' @importFrom rstudioapi isAvailable hasFun getThemeInfo
 #' @import leaflet
-#' @importFrom crayon green blue col_align red black white style make_style num_colors
+#' @importFrom crayon green blue col_align red black
+#' white style make_style num_colors
 #' @importFrom purrr walk
 #' @importFrom tools file_ext
 #' @importFrom magrittr %>%
@@ -18,9 +19,11 @@
 #' massconverter_logo()
 
 massconverter_logo <- function() {
-  cat(crayon::green("Thank you for using massconverter!\n"))
-  cat(crayon::green("Version", massconverter_version, "(", update_date, ')\n'))
-  cat(crayon::green("More information: search 'tidymass massconverter'.\n"))
+  message(crayon::green("Thank you for using massconverter!\n"))
+  message(crayon::green("Version",
+                        massconverter_version, "(", update_date, ')\n'))
+  message(crayon::green("More information:
+                        search 'tidymass massconverter'.\n"))
   cat(crayon::green(
     c(
       "                           _____                          _            ",
@@ -35,8 +38,8 @@ massconverter_logo <- function() {
   ), sep = "\n")
 }
 
-massconverter_version = "0.99.1"
-update_date = "2022-01-08"
+massconverter_version <- "0.99.1"
+update_date <- "2022-01-08"
 
 #' @title get_massconverter_version
 #' @description Get massconverter package version
@@ -47,14 +50,15 @@ update_date = "2022-01-08"
 #' @return version
 #' @examples
 #' get_massconverter_version()
-get_massconverter_version = function() {
+get_massconverter_version <- function() {
   return(massconverter_version)
 }
 
 
 # library(cowsay)
 # # https://onlineasciitools.com/convert-text-to-ascii-art
-# # writeLines(capture.output(say("Hello"), type = "message"), con = "ascii_art.txt")
+# # writeLines(capture.output(say("Hello"), type = "message"), 
+# con = "ascii_art.txt")
 # art <- readLines("logo.txt")
 # dput(art)
 # massconverter_logo <-

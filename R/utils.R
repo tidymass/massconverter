@@ -87,7 +87,7 @@ check_msconvert_parameter =
            zero_samples_mslevels = c(1, NA),
            zero_samples_add_missing_flanking_zero_count = 5) {
     ###check range of all the vector arguments
-    check_items =
+    check_items <-
       list(
         vendor_mslevels = vendor_mslevels,
         cwt_mslevels = cwt_mslevels,
@@ -109,13 +109,13 @@ check_msconvert_parameter =
     })
     
     #####Output format
-    output_format = match.arg(output_format)
+    output_format <- match.arg(output_format)
     
     ####binary_encoding_precision
-    binary_encoding_precision = match.arg(binary_encoding_precision)
+    binary_encoding_precision <- match.arg(binary_encoding_precision)
     
     ######peak picking
-    peak_picking_algorithm = match.arg(peak_picking_algorithm)
+    peak_picking_algorithm <- match.arg(peak_picking_algorithm)
     
     ##vendor
     if (length(vendor_mslevels) != 2) {
@@ -148,15 +148,15 @@ check_msconvert_parameter =
     }
     
     if (is.na(vendor_mslevels[2])) {
-      vendor_mslevels[2] = '-'
+      vendor_mslevels[2] <- '-'
     } else{
-      vendor_mslevels[2] = paste0('-', vendor_mslevels[2])
+      vendor_mslevels[2] <- paste0('-', vendor_mslevels[2])
     }
     
     if (is.na(cwt_mslevels[2])) {
-      cwt_mslevels[2] = '-'
+      cwt_mslevels[2] <- '-'
     } else{
-      cwt_mslevels[2] = paste0('-', cwt_mslevels[2])
+      cwt_mslevels[2] <- paste0('-', cwt_mslevels[2])
     }
     
     if (peak_picking_algorithm == "no") {
@@ -164,7 +164,7 @@ check_msconvert_parameter =
     }
     
     if (peak_picking_algorithm == "vendor") {
-      peak_picking =
+      peak_picking <-
         paste0("peakPicking vendor ",
                "msLevel=",
                vendor_mslevels[1],
@@ -172,7 +172,7 @@ check_msconvert_parameter =
     }
     
     if (peak_picking_algorithm == "cwt") {
-      peak_picking =
+      peak_picking <-
         paste0(
           "peakPicking cwt ",
           "snr=",
@@ -189,23 +189,23 @@ check_msconvert_parameter =
     ###polarity
     subset_polarity = match.arg(subset_polarity)
     if (subset_polarity == "positive") {
-      subset_polarity = paste0("polarity ", "positive")
+      subset_polarity <- paste0("polarity ", "positive")
     }
     
     if (subset_polarity == "negative") {
-      subset_polarity = paste0("polarity ", "negative")
+      subset_polarity <- paste0("polarity ", "negative")
     }
     
     if (subset_polarity == "any") {
-      subset_polarity = ""
+      subset_polarity <- ""
     }
     
     ###scan number
     if (is.na(subset_scan_number[1]) |
         is.na(subset_scan_number[2])) {
-      scan_number = ""
+      scan_number <- ""
     } else{
-      scan_number = paste0("scanNumber [",
+      scan_number <- paste0("scanNumber [",
                            subset_scan_number[1],
                            ",",
                            subset_scan_number[2],
@@ -215,9 +215,9 @@ check_msconvert_parameter =
     ###scan time (second)
     if (is.na(subset_scan_time[1]) |
         is.na(subset_scan_time[2])) {
-      scan_time = ""
+      scan_time <- ""
     } else{
-      scan_time = paste0("scanTime [",
+      scan_time <- paste0("scanTime [",
                          subset_scan_time[1],
                          ",",
                          subset_scan_time[2],
@@ -236,15 +236,15 @@ check_msconvert_parameter =
     }
     
     if (is.na(subset_mslevels[2])) {
-      subset_mslevels[2] = '-'
+      subset_mslevels[2] <- '-'
     } else{
-      subset_mslevels[2] = paste0('-', subset_mslevels[2])
+      subset_mslevels[2] <- paste0('-', subset_mslevels[2])
     }
     
-    subset_mslevels = paste0("msLevel ", subset_mslevels[1], subset_mslevels[2])
+    subset_mslevels <- paste0("msLevel ", subset_mslevels[1], subset_mslevels[2])
     
     ####zero samples
-    zero_samples_mode = match.arg(zero_samples_mode)
+    zero_samples_mode <- match.arg(zero_samples_mode)
     
     if (!zero_samples_mslevels[1] %in% c(seq_len(3))) {
       stop("zero_samples_mslevels[1] must be 1, 2 or 3.\n")
@@ -257,20 +257,20 @@ check_msconvert_parameter =
     }
     
     if (is.na(zero_samples_mslevels[2])) {
-      zero_samples_mslevels[2] = '-'
+      zero_samples_mslevels[2] <- '-'
     } else{
-      zero_samples_mslevels[2] = paste0(' ', zero_samples_mslevels[2])
+      zero_samples_mslevels[2] <- paste0(' ', zero_samples_mslevels[2])
     }
     
-    zero_samples_mslevels = paste0(zero_samples_mslevels[1],
+    zero_samples_mslevels <- paste0(zero_samples_mslevels[1],
                                    zero_samples_mslevels[2])
     
     if (zero_samples_mode == "no") {
-      zero_samples = ""
+      zero_samples <- ""
     }
     
     if (zero_samples_mode == "removeExtra") {
-      zero_samples = paste0("zeroSamples removeExtra ",
+      zero_samples <- paste0("zeroSamples removeExtra ",
                             zero_samples_mslevels)
     }
     
@@ -288,7 +288,7 @@ check_msconvert_parameter =
       )
     }
     
-    result = list(
+    result <- list(
       output_format = output_format,
       binary_encoding_precision = binary_encoding_precision,
       zlib = zlib,
@@ -358,7 +358,7 @@ check_msconvert_parameter =
 
 from_msconvert_parameter_to_code =
   function(msconvert_parameter) {
-    code_list =
+    code_list <-
       check_msconvert_parameter(
         output_format = msconvert_parameter@parameter$output_format,
         binary_encoding_precision = 

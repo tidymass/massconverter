@@ -11,7 +11,6 @@
 #' @return Code can run in bash.
 #' @export
 #' @examples
-#' \dontrun{
 #' parameter =
 #'   create_msconvert_parameter(
 #'     output_format = "mzXML",
@@ -39,7 +38,6 @@
 #'   msconvert_parameter = parameter,
 #'   process_all = FALSE
 #' )
-#' }
 
 get_run_code <-
   function(input_path = ".",
@@ -55,7 +53,7 @@ get_run_code <-
     } else{
       output_path <- normalizePath(output_path)
     }
-    file_name = dir(input_path, full.names = TRUE) %>%
+    file_name <- dir(input_path, full.names = TRUE) %>%
       normalizePath()
     if (length(file_name) == 0) {
       warning("No raw data in ", input_path)
@@ -76,14 +74,14 @@ get_run_code <-
         'chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert ',
         sep = ""
       )
-code =
+code <-
   from_msconvert_parameter_to_code(msconvert_parameter = msconvert_parameter)
     code <-
       paste0(' --ignoreUnknownInstrumentError ',
              code)
     if (process_all) {
       ####for each type of raw data
-      file_extension = paste0("*.", 
+      file_extension <- paste0("*.", 
                               unique(tools::file_ext(basename(file_name))))
       for (data_type in file_extension) {
         run_code <-
