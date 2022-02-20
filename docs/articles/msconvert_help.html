@@ -129,7 +129,7 @@
       <h1 data-toc-skip>Help of msconvert</h1>
                         <h4 data-toc-skip class="author">Xiaotao Shen (<a href="https://www.shenxt.info/" class="external-link uri">https://www.shenxt.info/</a>)</h4>
                         
-            <h4 data-toc-skip class="date">Created on 2021-12-26 and updated on 2022-01-14</h4>
+            <h4 data-toc-skip class="date">Created on 2021-12-26 and updated on 2022-02-19</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/tidymass/massconverter/blob/HEAD/vignettes/msconvert_help.Rmd" class="external-link"><code>vignettes/msconvert_help.Rmd</code></a></small>
       <div class="hidden name"><code>msconvert_help.Rmd</code></div>
@@ -138,18 +138,18 @@
 
     
     
-<div class="section level1">
-<h1 id="pwiz">
+<div class="section level2">
+<h2 id="pwiz">
 <strong>pwiz</strong><a class="anchor" aria-label="anchor" href="#pwiz"></a>
-</h1>
+</h2>
 <p>This is a docker image of of <code>proteowizard</code>.</p>
 <p>Just type this in terminal:</p>
 <pre><code>docker run -it --rm chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert --help</code></pre>
 </div>
-<div class="section level1">
-<h1 id="detailed-help-of-msconvert">
+<div class="section level2">
+<h2 id="detailed-help-of-msconvert">
 <strong>Detailed help of <code>msconvert</code></strong><a class="anchor" aria-label="anchor" href="#detailed-help-of-msconvert"></a>
-</h1>
+</h2>
 <pre><code>Convert mass spec data file formats.
 
 Return value: # of failed files.
@@ -726,16 +726,16 @@ support@proteowizard.org
 ProteoWizard release: 3.0.21354 (9ee14c7)
 Build date: Dec 20 2021 16:00:06</code></pre>
 </div>
-<div class="section level1">
-<h1 id="example-of-docker">
+<div class="section level2">
+<h2 id="example-of-docker">
 <strong>Example of docker</strong><a class="anchor" aria-label="anchor" href="#example-of-docker"></a>
-</h1>
+</h2>
 <pre><code>docker run --rm -e WINEDEBUG=-all -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data:/data -v /Users/xiaotaoshen/tidymass/massconverter/vignettes/demo_data/mzxml:/outpath chambm/pwiz-skyline-i-agree-to-the-vendor-licenses wine msconvert /data/3.raw --ignoreUnknownInstrumentError --mzML --32 --zlib  --filter \"peakPicking true 1-\" --filter \"msLevel 1\"  -o /outpath/</code></pre>
 </div>
-<div class="section level1">
-<h1 id="other-links">
+<div class="section level2">
+<h2 id="other-links">
 <strong>Other links</strong><a class="anchor" aria-label="anchor" href="#other-links"></a>
-</h1>
+</h2>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://fragpipe.nesvilab.org/docs/tutorial_convert.html" class="external-link uri">https://fragpipe.nesvilab.org/docs/tutorial_convert.html</a></p></li>
 <li><p><a href="https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46" class="external-link uri">https://currentprotocols.onlinelibrary.wiley.com/doi/10.1002/0471250953.bi1324s46</a></p></li>
@@ -749,10 +749,10 @@ Build date: Dec 20 2021 16:00:06</code></pre>
 <li><p><a href="https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R" class="external-link uri">https://github.com/cran/MetabolomicsBasics/blob/master/R/msconvert.R</a></p></li>
 </ol>
 </div>
-<div class="section level1">
-<h1 id="session-information">
+<div class="section level2">
+<h2 id="session-information">
 <strong>Session information</strong><a class="anchor" aria-label="anchor" href="#session-information"></a>
-</h1>
+</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; R Under development (unstable) (2022-01-11 r81473)</span>

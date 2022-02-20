@@ -25,10 +25,10 @@ You can install `massconverter` from
 [Github](https://github.com/tidymass/massconverter).
 
 ``` r
-if(!require(devtools)){
-install.packages("devtools")
+if(!require(remotes)){
+install.packages("remotes")
 }
-devtools::install_github("tidymass/massconverter")
+remotes::install_github("tidymass/massconverter")
 ```
 
 More installation information can be found [here](https://tidymass.github.io/massconverter/articles/massconverter_install.html).
