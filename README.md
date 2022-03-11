@@ -7,7 +7,7 @@
 [![Dependencies](https://tinyverse.netlify.com/badge/massconverter)](https://cran.r-project.org/package=massconverter)
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
-`massconverter` is a part of [tidymass](https://tidymass.github.io/tidymass/).
+`massconverter` is a part of [tidymass](https://www.tidymass.org/).
 
 ------
 
