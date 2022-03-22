@@ -9,7 +9,6 @@
 
 `massconverter` is a part of [tidymass](https://www.tidymass.org/).
 
-------
 
 # About
 
@@ -21,13 +20,18 @@ More information can be found [here](https://hub.docker.com/r/chambm/pwiz-skylin
 
 # Installation
 
-You can install `massconverter` from
-[Github](https://github.com/tidymass/massconverter).
+You can install `massconverter` from [GitLab](https://gitlab.com/jaspershen/massconverter)
 
 ``` r
 if(!require(remotes)){
 install.packages("remotes")
 }
+remotes::install_gitlab("jaspershen/massconverter")
+```
+
+or [GitHub](https://github.com/tidymass/massconverter)
+
+``` r
 remotes::install_github("tidymass/massconverter")
 ```
 
@@ -56,7 +60,7 @@ Palo Alto, CA
 
 # Citation
 
-If you use `masscleaner` in you publication, please cite this publication:
+If you use `massconverter` in your publications, please cite this paper:
 
 TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data.
 
@@ -64,4 +68,4 @@ Xiaotao Shen, Hong Yan, Chuchu Wang, Peng Gao, Caroline H. Johnson, Michael P. S
 
 [Web Link](https://www.biorxiv.org/content/10.1101/2022.03.15.484499v1).
 
-Thanks very much\!
+Thanks very much!
