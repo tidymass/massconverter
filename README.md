@@ -35,7 +35,7 @@ or [GitHub](https://github.com/tidymass/massconverter)
 remotes::install_github("tidymass/massconverter")
 ```
 
-More installation information can be found [here](https://tidymass.github.io/massconverter/articles/massconverter_install.html).
+More installation information can be found [here](https://massconverter.tidymass.org/articles/install.html).
 
 # Get started
 
