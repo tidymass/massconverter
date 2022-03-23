@@ -16,9 +16,6 @@ docker pwiz image
 \description{
 Pull docker pwiz image
 }
-\examples{
-docker_pull_pwiz(force = FALSE)
-}
 \author{
 Xiaotao Shen
 \email{shenxt1990@outlook.com}

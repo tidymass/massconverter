@@ -6,9 +6,6 @@
 #' @param force Force to install pwiz
 #' @return docker pwiz image
 #' @export
-#' @examples
-#' docker_pull_pwiz(force = FALSE)
-
 
 docker_pull_pwiz <- function(force = FALSE) {
   ###check docker is available or not

@@ -31,12 +31,6 @@
 #'     zero_samples_add_missing_flanking_zero_count = 5
 #'   )
 #' parameter
-#' 
-#' convert_raw_data(input_path = "demo_data/raw_data",
-#'                  output_path = "demo_data/mzxml",
-#'                  msconvert_parameter = parameter,
-#'                  process_all = FALSE
-#'                  )
 
 convert_raw_data <-
   function(input_path = ".",

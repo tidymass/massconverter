@@ -4,7 +4,6 @@
 #' @author Xiaotao Shen
 #' \email{shenxt1990@@outlook.com}
 #' @importFrom rstudioapi isAvailable hasFun getThemeInfo
-#' @import leaflet
 #' @importFrom crayon green blue col_align red black
 #' white style make_style num_colors
 #' @importFrom purrr walk
