@@ -2,4 +2,8 @@
 
 * Create.
 
+# Version 1.0.1
+
+* Fixed some bugs.
+
 

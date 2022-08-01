@@ -53,7 +53,7 @@ if (requireNamespace("htmltools", quietly = TRUE)) {
   htmlwidgets::setWidgetIdSeed(42)
 }
 library(leaflet)
-leaflet(width = "100%") %>%
+leaflet::leaflet(width = "100%") %>%
   addTiles() %>%
   addMarkers(
     lng = -122.174878,
