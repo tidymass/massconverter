@@ -18,12 +18,10 @@
 #' massconverter_logo()
 
 massconverter_logo <- function() {
-  message(crayon::green("Thank you for using massconverter!\n"))
-  message(crayon::green("Version",
-                        massconverter_version, "(", update_date, ')\n'))
-  message(crayon::green("More information:
-                        search 'tidymass massconverter'.\n"))
-  cat(crayon::green(
+  message("Thank you for using massconverter!")
+  message("Version ",massconverter_version, " (", update_date, ')')
+  message("More information: massconverter.tidymass.org")
+  cat(
     c(
       "                           _____                          _            ",
       "                          / ____|                        | |           ",
@@ -33,12 +31,12 @@ massconverter_logo <- function() {
       " |_| |_| |_|\\__,_|___/___/\\_____\\___/|_| |_|\\_/ \\___|_|   \\__\\___|_|   ",
       "                                                                       ",
       "                                                                       "
-    )
-  ), sep = "\n")
+    ), sep = "\n")
 }
 
-massconverter_version <- "0.99.1"
-update_date <- "2022-01-08"
+massconverter_version <- 
+  as.character(utils::packageVersion(pkg = "massconverter"))
+update_date <- as.character(Sys.time())
 
 #' @title get_massconverter_version
 #' @description Get massconverter package version
@@ -56,7 +54,7 @@ get_massconverter_version <- function() {
 
 # library(cowsay)
 # # https://onlineasciitools.com/convert-text-to-ascii-art
-# # writeLines(capture.output(say("Hello"), type = "message"), 
+# # writeLines(capture.output(say("Hello"), type = "message"),
 # con = "ascii_art.txt")
 # art <- readLines("logo.txt")
 # dput(art)

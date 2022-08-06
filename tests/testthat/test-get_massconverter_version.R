@@ -1,3 +1,5 @@
 test_that("massconverter version", {
-  expect_equal(get_massconverter_version(), "0.99.1")
+  version <-
+    get_massconverter_version()
+  expect_match(object = version, "[0-9]{1,2}\\.[0-9]{1,2}\\.[0-9]{1,2}")
 })

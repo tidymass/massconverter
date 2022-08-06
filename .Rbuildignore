@@ -30,3 +30,5 @@ vignettes/demo_data
 vignettes/install_cache
 vignettes/install_docker_cache
 vignettes/msconvert_help_cache
+demo_data
+demo_data/

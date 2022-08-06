@@ -1,6 +1,6 @@
 Package: massconverter
 Title: Convert mass spectrometry raw data to othter format data
-Version: 1.0.1
+Version: 1.0.2
 Date: 2022-01-08
 Authors@R: 
     person(given = "Xiaotao",

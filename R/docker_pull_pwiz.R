@@ -28,13 +28,13 @@ docker_pull_pwiz <- function(force = FALSE) {
   ###if force is true
   if (force) {
     docker$image$pull('chambm/pwiz-skyline-i-agree-to-the-vendor-licenses')
-    message("Done.\n")
+    message("Done.")
   } else{
     if (pwiz_available) {
-      message("You have installed pwiz.\n")
+      message("You have installed pwiz.")
     } else{
       docker$image$pull('chambm/pwiz-skyline-i-agree-to-the-vendor-licenses')
-      message("Done.\n")
+      message("Done.")
     }
     
   }
