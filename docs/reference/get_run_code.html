@@ -23,13 +23,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">massconverter</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.1</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav"><li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Help documents
      
     <span class="caret"></span>
@@ -48,7 +48,7 @@
     </li>
   </ul></li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     News
      
     <span class="caret"></span>
@@ -70,7 +70,7 @@
   </a>
 </li>
 <li>
-  <a href="https://twitter.com/JasperShen1990" class="external-link">
+  <a href="https://twitter.com/xiaotaoshen1990" class="external-link">
     <span class="fab fa-twitter fa-lg"></span>
      
   </a>
@@ -99,31 +99,42 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_run_code</span><span class="op">(</span>
-  input_path <span class="op">=</span> <span class="st">"."</span>,
-  <span class="va">output_path</span>,
-  <span class="va">msconvert_parameter</span>,
-  docker_parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">)</span>,
-  process_all <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_run_code</span><span class="op">(</span></span>
+<span>  input_path <span class="op">=</span> <span class="st">"."</span>,</span>
+<span>  <span class="va">output_path</span>,</span>
+<span>  <span class="va">msconvert_parameter</span>,</span>
+<span>  docker_parameters <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  process_all <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>input_path</dt>
 <dd><p>input path (raw data)</p></dd>
+
+
 <dt>output_path</dt>
 <dd><p>output path. If missing, same with input_path.</p></dd>
+
+
 <dt>msconvert_parameter</dt>
 <dd><p>msconvert parameters. See</p></dd>
+
+
 <dt>docker_parameters</dt>
 <dd><p>docker_parameters</p></dd>
+
+
 <dt>process_all</dt>
 <dd><p>process all raw data together or one by one.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>Code can run in bash.</p>
+    
+
+<p>Code can run in bash.</p>
     </div>
     <div id="author">
     <h2>Author</h2>
@@ -133,30 +144,30 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">parameter</span> <span class="op">=</span></span>
-<span class="r-in">  <span class="fu"><a href="create_msconvert_parameter.html">create_msconvert_parameter</a></span><span class="op">(</span></span>
-<span class="r-in">    output_format <span class="op">=</span> <span class="st">"mzXML"</span>,</span>
-<span class="r-in">    binary_encoding_precision <span class="op">=</span> <span class="st">"32"</span>,</span>
-<span class="r-in">    zlib <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span class="r-in">    write_index <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span class="r-in">    peak_picking_algorithm <span class="op">=</span> <span class="st">"cwt"</span>,</span>
-<span class="r-in">    vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">    cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">    cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span class="r-in">    cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span class="r-in">    subset_polarity <span class="op">=</span> <span class="st">"positive"</span>,</span>
-<span class="r-in">    subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">    subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">300</span><span class="op">)</span>,</span>
-<span class="r-in">    subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
-<span class="r-in">    zero_samples_mode <span class="op">=</span> <span class="st">"removeExtra"</span>,</span>
-<span class="r-in">    zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">    zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"><span class="va">parameter</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">parameter</span> <span class="op">=</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="create_msconvert_parameter.html">create_msconvert_parameter</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    output_format <span class="op">=</span> <span class="st">"mzXML"</span>,</span></span>
+<span class="r-in"><span>    binary_encoding_precision <span class="op">=</span> <span class="st">"32"</span>,</span></span>
+<span class="r-in"><span>    zlib <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>    write_index <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>    peak_picking_algorithm <span class="op">=</span> <span class="st">"cwt"</span>,</span></span>
+<span class="r-in"><span>    vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,</span></span>
+<span class="r-in"><span>    cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,</span></span>
+<span class="r-in"><span>    subset_polarity <span class="op">=</span> <span class="st">"positive"</span>,</span></span>
+<span class="r-in"><span>    subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">300</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    zero_samples_mode <span class="op">=</span> <span class="st">"removeExtra"</span>,</span></span>
+<span class="r-in"><span>    zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">parameter</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">-------------------- </span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">pacakge_name: massconverter</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">function_name: create_msconvert_parameter</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">time: 2022-03-21 10:59:39</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">time: 2022-08-07 20:43:32</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">parameters:</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">output_format : mzXML</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">binary_encoding_precision : 32</span> </span>
@@ -174,13 +185,13 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">zero_samples_mode : removeExtra</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">zero_samples_mslevels : c(1, NA)</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">zero_samples_add_missing_flanking_zero_count : 5</span> </span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">get_run_code</span><span class="op">(</span></span>
-<span class="r-in">  input_path <span class="op">=</span> <span class="st">"demo_data/raw_data"</span>,</span>
-<span class="r-in">  output_path <span class="op">=</span> <span class="st">"demo_data/mzxml"</span>,</span>
-<span class="r-in">  msconvert_parameter <span class="op">=</span> <span class="va">parameter</span>,</span>
-<span class="r-in">  process_all <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span class="r-in"><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">get_run_code</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  input_path <span class="op">=</span> <span class="st">"demo_data/raw_data"</span>,</span></span>
+<span class="r-in"><span>  output_path <span class="op">=</span> <span class="st">"demo_data/mzxml"</span>,</span></span>
+<span class="r-in"><span>  msconvert_parameter <span class="op">=</span> <span class="va">parameter</span>,</span></span>
+<span class="r-in"><span>  process_all <span class="op">=</span> <span class="cn">FALSE</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>No raw data in /Users/xiaotaoshen/tidymass/massconverter/docs/reference/demo_data/raw_data</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
 </code></pre></div>

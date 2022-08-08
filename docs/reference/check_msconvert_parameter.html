@@ -23,13 +23,13 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">massconverter</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Released version">0.99.1</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav"><li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Help documents
      
     <span class="caret"></span>
@@ -48,7 +48,7 @@
     </li>
   </ul></li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     News
      
     <span class="caret"></span>
@@ -70,7 +70,7 @@
   </a>
 </li>
 <li>
-  <a href="https://twitter.com/JasperShen1990" class="external-link">
+  <a href="https://twitter.com/xiaotaoshen1990" class="external-link">
     <span class="fab fa-twitter fa-lg"></span>
      
   </a>
@@ -99,25 +99,25 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">check_msconvert_parameter</span><span class="op">(</span>
-  output_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mzXML"</span>, <span class="st">"mzML"</span>, <span class="st">"mz5"</span>, <span class="st">"mgf"</span>, <span class="st">"text"</span>, <span class="st">"ms1"</span>, <span class="st">"cms1"</span>, <span class="st">"ms2"</span>,
-    <span class="st">"cms2"</span><span class="op">)</span>,
-  binary_encoding_precision <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"64"</span>, <span class="st">"32"</span><span class="op">)</span>,
-  zlib <span class="op">=</span> <span class="cn">TRUE</span>,
-  write_index <span class="op">=</span> <span class="cn">TRUE</span>,
-  peak_picking_algorithm <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"vendor"</span>, <span class="st">"cwt"</span>, <span class="st">"no"</span><span class="op">)</span>,
-  vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,
-  cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,
-  cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,
-  cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,
-  subset_polarity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"any"</span>, <span class="st">"positive"</span>, <span class="st">"negative"</span><span class="op">)</span>,
-  subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,
-  subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,
-  subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,
-  zero_samples_mode <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"no"</span>, <span class="st">"removeExtra"</span>, <span class="st">"addMissing"</span><span class="op">)</span>,
-  zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,
-  zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">check_msconvert_parameter</span><span class="op">(</span></span>
+<span>  output_format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"mzXML"</span>, <span class="st">"mzML"</span>, <span class="st">"mz5"</span>, <span class="st">"mgf"</span>, <span class="st">"text"</span>, <span class="st">"ms1"</span>, <span class="st">"cms1"</span>, <span class="st">"ms2"</span>,</span>
+<span>    <span class="st">"cms2"</span><span class="op">)</span>,</span>
+<span>  binary_encoding_precision <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"64"</span>, <span class="st">"32"</span><span class="op">)</span>,</span>
+<span>  zlib <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  write_index <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  peak_picking_algorithm <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"vendor"</span>, <span class="st">"cwt"</span>, <span class="st">"no"</span><span class="op">)</span>,</span>
+<span>  vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,</span>
+<span>  cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,</span>
+<span>  subset_polarity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"any"</span>, <span class="st">"positive"</span>, <span class="st">"negative"</span><span class="op">)</span>,</span>
+<span>  subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  zero_samples_mode <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"no"</span>, <span class="st">"removeExtra"</span>, <span class="st">"addMissing"</span><span class="op">)</span>,</span>
+<span>  zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>  zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -125,42 +125,75 @@
     <dl><dt>output_format</dt>
 <dd><p>"mzXML","mzML", "mz5", "mgf", "text", "ms1",
 "cms1", "ms2", or "cms2".</p></dd>
+
+
 <dt>binary_encoding_precision</dt>
 <dd><p>"64" or "32"</p></dd>
+
+
 <dt>zlib</dt>
 <dd><p>TRUE or not.</p></dd>
+
+
 <dt>write_index</dt>
 <dd><p>TRUE or not.</p></dd>
+
+
 <dt>peak_picking_algorithm</dt>
 <dd><p>"vendor" or "cwt"</p></dd>
+
+
 <dt>vendor_mslevels</dt>
 <dd><p>A two numeric vector. Second can be set as NA.</p></dd>
+
+
 <dt>cwt_mslevels</dt>
 <dd><p>A two numeric vector. Second can be set as NA.</p></dd>
+
+
 <dt>cwt_min_snr</dt>
 <dd><p>minimum signal-to-noise ratio</p></dd>
+
+
 <dt>cwt_min_peak_spacing</dt>
 <dd><p>minimum peak spacing</p></dd>
+
+
 <dt>subset_polarity</dt>
 <dd><p>"any", "positive" or "negative"</p></dd>
+
+
 <dt>subset_scan_number</dt>
 <dd><p>A two numeric vector.
 Can be c(NA, NA) if don't use this.</p></dd>
+
+
 <dt>subset_scan_time</dt>
 <dd><p>A two numeric vector.
 Can be c(NA, NA) if don't use this.</p></dd>
+
+
 <dt>subset_mslevels</dt>
 <dd><p>A two numeric vector. Second can be set as NA.</p></dd>
+
+
 <dt>zero_samples_mode</dt>
 <dd><p>"no", "removeExtra", or "addMissing".</p></dd>
+
+
 <dt>zero_samples_mslevels</dt>
 <dd><p>A two numeric vector. Second can be set as NA.</p></dd>
+
+
 <dt>zero_samples_add_missing_flanking_zero_count</dt>
 <dd><p>= 5</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>error or code list</p>
+    
+
+<p>error or code list</p>
     </div>
     <div id="author">
     <h2>Author</h2>
@@ -170,41 +203,41 @@ Can be c(NA, NA) if don't use this.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">output_format</span> <span class="op">=</span> <span class="st">"mzXML"</span></span>
-<span class="r-in"><span class="va">binary_encoding_precision</span> <span class="op">=</span> <span class="st">"64"</span></span>
-<span class="r-in"><span class="va">zlib</span> <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span class="r-in"><span class="va">write_index</span> <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span class="r-in"><span class="va">peak_picking_algorithm</span> <span class="op">=</span> <span class="st">"vendor"</span></span>
-<span class="r-in"><span class="va">vendor_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cwt_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">cwt_min_snr</span> <span class="op">=</span> <span class="fl">0.1</span></span>
-<span class="r-in"><span class="va">cwt_min_peak_spacing</span> <span class="op">=</span> <span class="fl">0.1</span></span>
-<span class="r-in"><span class="va">subset_polarity</span> <span class="op">=</span> <span class="st">"any"</span></span>
-<span class="r-in"><span class="va">subset_scan_number</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">subset_scan_time</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">subset_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">zero_samples_mode</span> <span class="op">=</span> <span class="st">"no"</span></span>
-<span class="r-in"><span class="va">zero_samples_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">zero_samples_add_missing_flanking_zero_count</span> <span class="op">=</span> <span class="fl">5</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu">check_msconvert_parameter</span><span class="op">(</span></span>
-<span class="r-in">  output_format <span class="op">=</span> <span class="st">"mzXML"</span>,</span>
-<span class="r-in">  binary_encoding_precision <span class="op">=</span> <span class="st">"64"</span>,</span>
-<span class="r-in">  zlib <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span class="r-in">  write_index <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span class="r-in">  peak_picking_algorithm <span class="op">=</span> <span class="st">"vendor"</span>,</span>
-<span class="r-in">  vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span>
-<span class="r-in">  cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">  cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span class="r-in">  cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,</span>
-<span class="r-in">  subset_polarity <span class="op">=</span> <span class="st">"any"</span>,</span>
-<span class="r-in">  subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">  subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">  subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">  zero_samples_mode <span class="op">=</span> <span class="st">"no"</span>,</span>
-<span class="r-in">  zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span>
-<span class="r-in">  zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span></span>
-<span class="r-in"><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">output_format</span> <span class="op">=</span> <span class="st">"mzXML"</span></span></span>
+<span class="r-in"><span><span class="va">binary_encoding_precision</span> <span class="op">=</span> <span class="st">"64"</span></span></span>
+<span class="r-in"><span><span class="va">zlib</span> <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span><span class="va">write_index</span> <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span><span class="va">peak_picking_algorithm</span> <span class="op">=</span> <span class="st">"vendor"</span></span></span>
+<span class="r-in"><span><span class="va">vendor_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cwt_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">cwt_min_snr</span> <span class="op">=</span> <span class="fl">0.1</span></span></span>
+<span class="r-in"><span><span class="va">cwt_min_peak_spacing</span> <span class="op">=</span> <span class="fl">0.1</span></span></span>
+<span class="r-in"><span><span class="va">subset_polarity</span> <span class="op">=</span> <span class="st">"any"</span></span></span>
+<span class="r-in"><span><span class="va">subset_scan_number</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">subset_scan_time</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">subset_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">zero_samples_mode</span> <span class="op">=</span> <span class="st">"no"</span></span></span>
+<span class="r-in"><span><span class="va">zero_samples_mslevels</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">zero_samples_add_missing_flanking_zero_count</span> <span class="op">=</span> <span class="fl">5</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">check_msconvert_parameter</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  output_format <span class="op">=</span> <span class="st">"mzXML"</span>,</span></span>
+<span class="r-in"><span>  binary_encoding_precision <span class="op">=</span> <span class="st">"64"</span>,</span></span>
+<span class="r-in"><span>  zlib <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>  write_index <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>  peak_picking_algorithm <span class="op">=</span> <span class="st">"vendor"</span>,</span></span>
+<span class="r-in"><span>  vendor_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  cwt_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  cwt_min_snr <span class="op">=</span> <span class="fl">0.1</span>,</span></span>
+<span class="r-in"><span>  cwt_min_peak_spacing <span class="op">=</span> <span class="fl">0.1</span>,</span></span>
+<span class="r-in"><span>  subset_polarity <span class="op">=</span> <span class="st">"any"</span>,</span></span>
+<span class="r-in"><span>  subset_scan_number <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  subset_scan_time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  subset_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  zero_samples_mode <span class="op">=</span> <span class="st">"no"</span>,</span></span>
+<span class="r-in"><span>  zero_samples_mslevels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="cn">NA</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  zero_samples_add_missing_flanking_zero_count <span class="op">=</span> <span class="fl">5</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $output_format</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "mzXML"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>

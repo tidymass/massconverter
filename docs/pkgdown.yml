@@ -1,5 +1,5 @@
-pandoc: 2.14.0.3
-pkgdown: 2.0.2
+pandoc: '2.18'
+pkgdown: 2.0.5
 pkgdown_sha: ~
 articles:
   contact_us: contact_us.html
@@ -7,7 +7,7 @@ articles:
   install: install.html
   install_docker: install_docker.html
   msconvert_help: msconvert_help.html
-last_built: 2022-03-21T17:57Z
+last_built: 2022-08-08T03:43Z
 urls:
   reference: https://tidymass.github.io/massconverter/reference
   article: https://tidymass.github.io/massconverter/articles
