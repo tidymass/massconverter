@@ -3,14 +3,14 @@
   # if (length(needed) == 0)
   #   return()
   #
-  # crayon::num_colors(TRUE)
-  # massconverter_attach()
+  crayon::num_colors(TRUE)
+  massconverter_attach()
   
   # if (!"package:conflicted" %in% search()) {
   #   x <- massconverter_conflicts()
   #   msg(massconverter_conflict_message(x), startup = TRUE)
   # }
-  msg(paste0("Version ", massconverter_version, " (", update_date, ')'))
+  packageStartupMessage(paste0("massconverter ", massconverter_version, " (", update_date, ')'))
 }
 
 is_attached <- function(x) {

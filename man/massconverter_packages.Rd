@@ -5,16 +5,23 @@
 \title{List all packages in the massconverter}
 \usage{
 massconverter_packages(include_self = TRUE)
+
+massconverter_packages(include_self = TRUE)
 }
 \arguments{
 \item{include_self}{Include massconverter in the list?}
 }
 \value{
+massconverter packages
+
 massconverter_packages
 }
 \description{
 List all packages in the massconverter
+
+List all packages in the massconverter
 }
 \examples{
+massconverter_packages()
 massconverter_packages()
 }

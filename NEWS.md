@@ -10,4 +10,8 @@
 --------------
 * Fixed some bugs.
 
+# Version 1.0.3
+--------------
+* Fixed some bugs.
+
 
