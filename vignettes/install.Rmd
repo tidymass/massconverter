@@ -30,7 +30,7 @@ knitr::opts_chunk$set(
 # **Install `massconverter` from GitLab**
 
 ```{r,eval=FALSE,warning=FALSE, R.options="", message=FALSE, cache=TRUE}
-remotes::install_gitlab("jaspershen/massconverter", dependencies = TRUE)
+remotes::install_gitlab("tidymass/massconverter", dependencies = TRUE)
 ```
 
 # **Install `massconverter` from GitHub**
