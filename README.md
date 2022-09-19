@@ -14,6 +14,8 @@
 
 `massconverter` can be used to convert mass spectrometry data to other format data based on `msconvert` docker image. 
 
+> Now this is only supports mac or Linux OS.
+
 More information can be found [here](https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses)
 
 <img src="man/figures/Screen Shot 2022-01-08 at 6.12.58 PM.png" align="middle" alt="" width = "100%"/>
