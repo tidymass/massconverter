@@ -6,8 +6,7 @@
 \title{check_msconvert_parameter}
 \usage{
 check_msconvert_parameter(
-  output_format = c("mzXML", "mzML", "mz5", "mgf", "text", "ms1", "cms1", "ms2",
-    "cms2"),
+  output_format = c("mzXML", "mzML", "mz5", "mgf", "text", "ms1", "cms1", "ms2", "cms2"),
   binary_encoding_precision = c("64", "32"),
   zlib = TRUE,
   write_index = TRUE,
